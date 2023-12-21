@@ -1,3 +1,358 @@
+// var person = {
+//   name: 'Hosein',
+//   family: 'Hosein',
+//   age: 34
+// }
+
+// var keys = Object.keys(person)
+
+// console.log(keys)
+
+// for (var key of keys) {
+//   console.log(key, person[key])
+// }
+
+// console.log(Object.values(person))
+
+// var entries = Object.entries(person)
+
+// console.log(entries)
+
+// var newObj = Object.fromEntries(entries)
+
+// console.log(newObj)
+
+// var person = {
+//   name: 'Ali'
+// }
+
+// console.log(Object.getOwnPropertyDescriptor(person, 'name'))
+
+// person.age = 34
+
+// Object.defineProperty(person, 'family', {
+//   value: 'Mousavi',
+//   writable: true,
+//   configurable: true,
+//   enumerable: true
+// })
+
+// Object.defineProperty(person, 'fullName', {
+//   get: function () {
+//     return this.name + ' ' + this.family
+//   },
+//   set: function (value) {
+//     var arr = value.split(' ')
+//     this.name = arr[0]
+//     this.family = arr[1]
+//   }
+// })
+
+// Object.defineProperty(person, 'age', {
+//   get: function () {
+//     return 'My age is ' + this._age
+//   },
+//   set: function (value) {
+//     this._age = value
+//   }
+// })
+
+// person.age = 50
+
+// console.log(person.age)
+
+// console.log(person.fullName)
+
+// person.fullName = 'Hasan Hasani'
+
+// console.log(person)
+
+// console.log(person)
+
+// person.name = 'Hasan'
+// person.family = 'Hasani'
+// delete person.name
+// delete person.family
+
+// for (var key in person) {
+//   console.log(key, person[key])
+// }
+
+// console.log(JSON.stringify(person))
+
+// console.log(person)
+
+// var person = {
+//   name: 'Ali',
+//   age: 34,
+//   married: true,
+//   friends: null,
+//   graduate: undefined,
+//   sym: Symbol(),
+//   func: function () {},
+//   birthday: new Date()
+// }
+
+// var json = JSON.stringify(person)
+
+// console.log(person)
+// console.log(json)
+
+// var newObj = JSON.parse(json)
+
+// console.log(newObj)
+
+//#12EBA1
+// var obj1 = {
+//   a: 10,
+//   b: 20,
+//   f: {
+//     g: 60,
+//     h: 70
+//   }
+// }
+
+// var obj3 = {
+//   a: 30,
+//   d: 40
+// }
+
+// var obj2 = obj1
+// var obj2 = {}
+// var obj4 = Object.assign(obj2, obj1, obj3)
+
+// console.log(obj2 === obj4) // true
+
+// // var obj2 = Object.assign({}, obj1)
+// var obj2 = JSON.parse(JSON.stringify(obj1))
+
+// obj2.b = 50
+// obj2.f.g = 90
+
+// console.log(obj1 === obj2)
+// console.log(obj1)
+// console.log(obj2)
+
+// var obj = Object.create({
+//   name: 'Ali',
+//   age: 34
+// })
+
+// // obj.name = 'Hasan'
+
+// // var obj = Object.create(null)
+
+// console.log(obj)
+// console.log(obj.name)
+
+// function welcome (greeting) {
+//   console.log(this)
+//   console.log(greeting, this.name, this.age)
+// }
+// var person1 = {
+//   name: 'Ali',
+//   age: 30
+// }
+// var person2 = { name: 'Mehdi', age: 36 }
+
+// var newWelcome1 = welcome.bind(person1, 'Hi')
+// newWelcome1() // Hi Ali 30
+// var newWelcome2 = welcome.bind(person2, 'Hello')
+// newWelcome2() // Hello Mehdi 36
+
+// var maryam = {
+//   firstName: 'Maryam',
+//   lastName: 'Saeidi',
+//   age: 24,
+//   getFullName: function (hi = 'Hi', bye = 'Bye') {
+//     console.log(hi + ' ' + this.firstName + ' ' + this.lastName + ', ' + bye)
+//   }
+// }
+
+// maryam.getFullName()
+
+// var masoome = {
+//   firstName: 'Masoome',
+//   lastName: 'Sadeghi',
+//   age: 32,
+//   getFullName: maryam.getFullName
+// }
+
+// masoome.getFullName()
+
+// var firstName = 'Nafise'
+// var lastName = 'Salehi'
+// var age = 29
+// var getFullName = maryam.getFullName
+
+// getFullName('Hello', 'Goodbye')
+
+// var mansoure = {
+//   firstName: 'Mansoore',
+//   lastName: 'Sadri'
+// }
+
+// getFullName.call(mansoure, 'Salam', 'Khodahafez')
+
+// var sara = {
+//   firstName: 'Sara',
+//   lastName: 'Khaghani'
+// }
+
+// getFullName.apply(sara, ['Hello', 'GoodBye'])
+
+// var bahar = {
+//   firstName: 'Bahar',
+//   lastName: 'Mahmmodian'
+// }
+
+// var newFunc = getFullName.bind(bahar, 'Salam', 'GoodBye')
+
+// newFunc('Khodahafez')
+
+// var mahdi = {
+//   firstName: 'Mahdi',
+//   lastName: 'Sardari',
+//   fullName: newFunc
+// }
+
+// newFunc.call(mahdi)
+
+// mahdi.fullName()
+
+// var numbers = [10, 2, 3, 7, 52, 4]
+
+// console.log(Math.max.apply(null, numbers))
+// console.log(Math.max.apply({}, numbers))
+
+// var myName = 'Ali'
+
+// // #12EFAC
+// function getMyName () {
+//   console.log(this.myName)
+// }
+
+// getMyName()
+
+// var obj = {
+//   myName: 'Hasan',
+//   //#12EFAC
+//   getMyName
+// }
+
+// obj.getMyName()
+
+// console.log(obj.getMyName === getMyName)
+
+// func()
+
+// new func()
+
+// var person = {
+//   name: 'Ali',
+//   family: 'Mousavi',
+//   age: 34,
+//   getFullName: function () {
+//     return this.name + ' ' + this.family
+//   }
+// }
+
+// console.log(person.getFullName())
+
+// var amene = {
+//   name: 'Amene',
+//   family: 'Sadegi',
+//   age: 34,
+//   getFullName () {
+//     return amene.name + ' ' + amene.family
+//   }
+// }
+
+// var anoosha = {
+//   name: 'Anoosha',
+//   family: 'Etebari',
+//   age: 28,
+//   getFullName () {
+//     return anoosha.name + ' ' + anoosha.family
+//   }
+// }
+
+// function Person (name, family, age) {
+//   this.name = name
+//   this.family = family
+//   this.age = age
+//   this.getFullName = function () {
+//     return this.name + ' ' + this.family
+//   }
+// }
+
+// var ali = new Person('Ali', 'Mousavi', 34)
+// var amene = new Person('Amene', 'Sadeghi', 34)
+// var anoosha = new Person('Anosha', 'Etebari', 28)
+
+// console.log(ali.getFullName())
+// console.log(amene.getFullName())
+// console.log(anoosha.getFullName())
+
+// var count = (function (defaultValue = 0) {
+//   var value = defaultValue
+
+//   function increase () {
+//     console.log(++value)
+//   }
+
+//   function decrease () {
+//     console.log(--value)
+//   }
+
+//   return {
+//     increase,
+//     decrease
+//   }
+// })(20)
+
+// var count = counter(10)
+
+// console.log(count)
+
+// function func (a) {
+//   return function (b) {
+//     return function (c) {
+//       return a + b + c
+//     }
+//   }
+// }
+
+// // console.log(func(10)(5)(20))
+
+// var func10 = func(10)
+
+// // console.log(func10(20)(30))
+
+// var func50 = func10(40)
+
+// // console.log(func50(60))
+// // console.log(func50(100))
+// // console.log(func50(200))
+
+// var myFunc5 = func(5)
+
+// console.log(myFunc5)
+
+// var person = {
+//     name: "Ali"
+// }
+
+// person.name = "Hasan"
+
+// function func () {
+//   console.log(myName)
+// }
+
+// func()
+// var myName = 'Ali'
+// window.myName = 'Ali'
+
 // setTimeout(function () {
 //   console.log('Samane')
 // }, 0)

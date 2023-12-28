@@ -1,3 +1,361 @@
+var date = new Date()
+
+console.log(date)
+
+date.setSeconds(date.getSeconds() + 1123)
+
+console.log(date)
+
+// var time = 1703760718
+
+// console.log((Date.now() / 1000).toFixed(0) - time)
+
+// console.log((123).toString(2))
+// console.log((2).toString(2))
+// console.log((25).toString(8))
+
+// var str = '    Hi  '
+// #Ab12CD
+
+// str = str.trim()
+
+// console.log(str)
+
+// var str = 'My name is Ali Mousavi'
+
+// var arr = str.split(' ')
+
+// console.log(arr)
+
+// var newStr = arr.join(' ')
+
+// console.log(newStr === str)
+
+// var str = 'Ali'
+
+// str[0] = 'Eli'
+
+// console.log(str, str.length)
+
+// str = 'Eli'
+
+// str.length = 2
+
+// console.log(str, str.length)
+
+// str.length = 10
+
+// console.log(str, str.length)
+
+// var number = 2
+// number = 5
+
+// var str = new String('Ali')
+
+// console.log(str.length)
+// console.log(str[2])
+
+// console.log(typeof str)
+
+// console.log(str + 'mousavi')
+
+// var arr = [1, 2, 3, 4]
+
+// var newArr = arr.map(function (el) {
+//   return 1 / el
+// })
+
+// console.log(newArr)
+
+// var arr = ['a', 'b', 'c']
+
+// var newArr = arr.reverse()
+
+// console.log(arr)
+// console.log(newArr)
+
+// console.log(arr === newArr)
+
+// var arr = [8, 3, 1, 6, 4, 11, 25]
+
+// arr.sort(function (b, a) {
+//   console.log(a, b)
+//   return a - b
+//   //   if (b < a) {
+//   //     return -1
+//   //   } else {
+//   //     return 1
+//   //   }
+// })
+
+// console.log(arr)
+
+// var classmates = [
+//   { name: 'Rezvan', age: undefined, gender: 'female' },
+//   { name: 'Sara', age: 35, gender: 'female' },
+//   { name: 'Mohammad', age: 27, gender: 'male' },
+//   { name: 'Mansooure', age: 33, gender: 'female' },
+//   { name: 'Mahnoosh', age: 32, gender: 'female' },
+//   { name: 'Sarineh', age: 35, gender: 'female' },
+//   { name: 'Maryam', age: 24, gender: 'female' },
+//   { name: 'Milad', age: 30, gender: 'male' }
+// ]
+
+// classmates.sort(function (b, a) {
+//   return b.age - a.age
+// })
+// classmates.sort(function (b, a) {
+//   return b.name < a.name
+//   if (b.name < a.name) {
+//     return 1
+//   } else {
+//     return -1
+//   }
+// })
+
+// console.log(classmates)
+
+// var classmates = new Array(100000).fill(0).map(function () {
+//   return { name: 'Milad', age: 30, gender: 'male' }
+// })
+
+// console.log(classmates)
+
+// console.time('AVG')
+
+// var length = classmates.filter(function (el) {
+//   return el.age
+// }).length
+
+// var sumAge = classmates.reduce(function (acc, el) {
+//   return acc + (el.age ?? 0)
+// }, 0)
+
+// console.log(length)
+
+// console.log(sumAge)
+
+// var avg = sumAge / length
+
+// console.log(avg)
+
+// console.timeEnd('AVG')
+
+// var arr = [2, 4, 6, 7, 9, 11]
+
+// var result = arr.reduce(function (acc, el) {
+//   console.log(acc, el, '===>', acc + el)
+//   return acc + el
+// }, 10)
+
+// console.log(result)
+
+// var acc = 0
+
+// arr.forEach(function (el) {
+//   acc = acc + el
+// })
+
+// console.log(acc)
+
+// var names = []
+
+// classmates.forEach(function (el) {
+//   if (el.gender === 'male') names.push(el.name)
+// })
+
+// console.log(names)
+
+// var arr = [1, 2, 3, 4]
+
+// var newArr = arr
+//   .map(function (el) {
+//     return [el, el * 2]
+//   })
+//   .flat()
+
+// var newArr = arr.flatMap(function (el) {
+//   return [el, el * 2]
+// })
+
+// console.log(newArr)
+
+// var names = classmates
+//   .filter(function (el) {
+//     return el.gender === 'female'
+//   })
+//   .map(function (el) {
+//     return el.name
+//   })
+//   .filter(function (name) {
+//     return name.length < 7
+//   })
+
+// // var names = classmates.filter(el => el.gender).map(el => el.name)
+
+// console.log(names)
+
+// var arr = [1, 2, 3, 4]
+
+// var newArr = arr.map(function (el) {
+//   console.log(el)
+//   //   return 'ali'
+//   return el * 2
+// })
+
+// console.log(newArr)
+
+// console.log(newArr.length === arr.length)
+
+// for (var el of classmates) {
+//   console.log(el.name)
+// }
+
+// var result = classmates.forEach(function (el, index, arr) {
+//   if (el.name === 'Sara') {
+//     break // Error
+//   }
+//   console.log(el.name)
+
+//   return 'ali' // not work
+// })
+
+// console.log(result) // undefined
+
+// classmates.forEach(el => console.log(el.name))
+
+// classmates = ['#12EACB', '#ABC249']
+
+// var result = classmates.includes(classmates[0])
+
+// console.log(result)
+
+// var maryamIndex = classmates.findIndex(function (el) {
+//   return el.name.toLowerCase() === 'ali'
+// })
+
+// console.log(maryamIndex)
+
+// console.log(classmates[maryamIndex])
+
+// var undefinedAge = classmates.some(function (el) {
+//   //   return el.age === undefined
+//   return !el.age
+// })
+
+// console.log(undefinedAge)
+
+// var arr = [2, 4, 6, 10, 12, 8]
+
+// var hasOdd = arr.some(function (el) {
+//   return el % 2
+// })
+
+// console.log(hasOdd)
+
+// var mohammad = classmates.find(function (el) {
+//   return el.name.toLowerCase() === 'mohammad'
+// })
+
+// console.log(mohammad)
+
+// var arr = [2, 4, 6, 8, 6, 12]
+
+// var odd = arr.find(function (el) {
+//   return el % 2
+// })
+
+// console.log(odd)
+
+// var olderThan30 = classmates.filter(function (el) {
+//   return el.age > 30
+// })
+
+// console.log(olderThan30)
+
+// var females = classmates.filter(function (el) {
+//   return el.gender === 'female'
+// })
+// var males = classmates.filter(function (el) {
+//   return el.gender === 'male'
+// })
+// var nonGender = classmates.filter(function (el) {
+//   return !el.gender
+// })
+
+// console.log(females)
+// console.log(males)
+// console.log(nonGender)
+
+// var arr = [2, 1, 75, 36, 24, 35]
+
+// var odds = arr.filter(function (el) {
+//   return el % 2
+// })
+
+// console.log(odds)
+
+// var arr = [2, 4, 6, 8, 12]
+
+// var arr = [1, 9, 3, 11, 21]
+
+// var isOdd = arr.every(function (el, index, arr) {
+//   return el % 2
+
+//   //   if (el % 2 === 1) {
+//   //     return true
+//   //   } else {
+//   //     return false
+//   //   }
+// })
+
+// console.log(isOdd)
+
+// var isEven = arr.every(function (el, index, arr) {
+//   return !(el % 2)
+// })
+
+// console.log(isEven)
+
+// var arr = Array.from({ length: 5, 1: 'A', 4: 'b' })
+
+// console.log(arr)
+
+// console.log(typeof arr)
+
+// console.log(Array.isArray(arr)) // true
+// console.log(Array.isArray('salam')) // false
+
+// var arr = Array.from({ length: 5 }, function (el, index) {
+//   return index + 1
+// })
+
+// console.log(arr)
+
+// var arr = [1, 2, 3]
+
+// var newArr = Array.from(arr, function (el) {
+//   return el * 2
+// })
+
+// console.log(newArr)
+
+// var arr = ['a', 'b', 'c', 'd']
+
+// console.log(arr)
+
+// arr.length = 20
+
+// console.log(arr)
+
+// var arr = [10]
+
+// var arr = new Array(10)
+
+// console.log(arr)
+// console.log(arr.length)
+// console.log(arr[1])
+
 // var person = {
 //   name: 'Hosein',
 //   family: 'Hosein',

@@ -7,6 +7,34 @@
   </head>
   <body>
     <h2>JavaScript Course</h2>
+    <button>Click Me</button>
     <script src="./index.js"></script>
+    <script>
+      function handleClick() {
+        console.log('Click')
+      }
+
+      var button = document.querySelector('button')
+
+      function func() {
+        console.log('clicked')
+      }
+
+      button.addEventListener('click', func)
+
+      setTimeout(function () {
+        button.removeEventListener('click', func)
+      }, 5000)
+
+      button.addEventListener('click', function () {
+        console.log('salam')
+      })
+
+      // button.addEventListener('click', function (event) {
+      //   // console.log(event.target.previousElementSibling)
+      //   // console.log(event.target.parentElement.children)
+      //   // console.log(event.timeStamp)
+      // })
+    </script>
   </body>
 </html>

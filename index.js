@@ -1,10 +1,23 @@
-var date = new Date()
+// var my_first_name = 'Ali'
+// var myLastName = 'Mousavi'
+// var MyAge = 34
 
-console.log(date)
+//  / \ | ! @ # $ % ^ & * () - _ + = [] {} ' " ` : ; , ~
 
-date.setSeconds(date.getSeconds() + 1123)
+// camelCaseNaming
+// PascalCaseNaming
+// snake_case_naming
+// kebab-case-naming
+// UPPER_CASE_NAMING     BASE_URL
 
-console.log(date)
+// my-logo => myLogo
+// var date = new Date()
+
+// console.log(date)
+
+// date.setSeconds(date.getSeconds() + 1123)
+
+// console.log(date)
 
 // var time = 1703760718
 

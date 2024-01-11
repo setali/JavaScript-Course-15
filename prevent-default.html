@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prevent Default</title>
+  </head>
+  <body>
+    <div>
+      <label>
+        <input type="checkbox" />
+        Select me
+      </label>
+    </div>
+    <div>
+      <a target="_blank" href="https://www.google.com/"> Click me </a>
+    </div>
+
+    <script>
+      document
+        .querySelector('input')
+        .addEventListener('click', function (event) {
+          event.preventDefault()
+        })
+
+      document.querySelector('a').addEventListener('click', function (event) {
+        event.preventDefault()
+        window.location.replace(event.target.href)
+      })
+    </script>
+  </body>
+</html>

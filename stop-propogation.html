@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stop propagation</title>
+  </head>
+  <body>
+    <div
+      id="green"
+      style="background-color: green; width: 150px; height: 150px"
+    >
+      <div
+        id="blue"
+        style="background-color: blue; width: 100px; height: 100px"
+      >
+        <div
+          id="red"
+          style="background-color: red; width: 50px; height: 50px"
+        ></div>
+      </div>
+    </div>
+    <script>
+      document.querySelector('#green').addEventListener('click', function () {
+        console.log('green')
+      })
+      document.querySelector('#blue').addEventListener('click', function () {
+        console.log('blue')
+      })
+      document
+        .querySelector('#red')
+        .addEventListener('click', function (event) {
+          event.stopPropagation()
+          console.log('red')
+        })
+    </script>
+  </body>
+</html>

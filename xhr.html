@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XHR</title>
+  </head>
+  <body>
+    <h2></h2>
+
+    <h3></h3>
+
+    <script>
+      function request(url, method, cb) {
+        var xhr = new XMLHttpRequest()
+
+        xhr.open(method, url)
+        xhr.send()
+
+        xhr.onload = function () {
+          data = JSON.parse(xhr.responseText)
+          cb(null, data)
+        }
+
+        xhr.onerror = function () {
+          cb('Error')
+        }
+      }
+      //   var url1 = 'https://jsonplaceholder.typicode.com/users/1'
+      //   var url1 =
+      //     'https://api.digikala.com/v1/categories/mobile-phone/brands/apple/search/?camCode%5B0%5D=582&camCode%5B1%5D=582&sort=1&seo_url=%2Fcategory-mobile-phone%2Fapple%2F%3FcamCode%255B0%255D%3D582%26camCode%255B1%255D%3D582%26sort%3D1&page=1'
+
+      var url1 = 'http://localhost:3000/'
+
+      request(url1, 'GET', function (err, data) {
+        if (err) {
+          console.log('Error')
+        } else {
+          document.querySelector('h2').textContent = data.name
+        }
+      })
+
+    //   var url2 = 'https://jsonplaceholder.typicode.com/users/2'
+
+    //   request(url2, 'GET', function (err, data) {
+    //     if (err) {
+    //       alert('Error')
+    //     } else {
+    //       document.querySelector('h3').textContent = data.name
+    //     }
+    //   })
+    </script>
+  </body>
+</html>

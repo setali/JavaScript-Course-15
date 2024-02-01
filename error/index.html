@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error</title>
+  </head>
+  <body>
+    <h2>Error Handling</h2>
+    <script src="./index.js"></script>
+    <script>
+      try {
+        slideshow({})
+      } catch (err) {
+        console.log(err instanceof SyntaxError)
+        // console.log(err)
+        // console.log(err.name)
+        // console.log(err.message)
+        // console.log(err.stack)
+      } finally {
+        console.log('Finally')
+      }
+
+      console.log('Index.html')
+    </script>
+  </body>
+</html>

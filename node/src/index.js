@@ -1,8 +1,14 @@
-console.clear()
+// console.clear()
 
+// import isOdd from 'is-odd'
 const isOdd = require('is-odd')
+// import { sum as mySum } from './modules/math'
+// const { sum } = require('./modules/math.js')
+import ali from './modules/math'
 
 console.log(isOdd(13))
+console.log(ali(2, 9))
+// console.log(mySum(1, 5))
 // console.log(Infinity - Infinity)
 // console.log(NaN - NaN)
 

@@ -4,12 +4,19 @@
   "description": "Code for JS class",
   "main": "index.js",
   "scripts": {
+    "start": "node dist/main.js",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "is-even": "^1.0.0",
+    "is-odd": "^3.0.1",
     "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "webpack": "^5.90.1",
+    "webpack-cli": "^5.1.4"
   }
 }

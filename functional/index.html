@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <button>Click me</button>
+      <input onkeydown="" />
+    </div>
+    <script>
+      //   function handleClick(event) {
+      //     console.log(event)
+      //     console.log('salam', event.target)
+      //   }
+
+      function search(event) {
+        console.log(event.target.value)
+      }
+
+      debouncedSearch = debounce(search, 500)
+
+      document
+        .querySelector('input')
+        .addEventListener('keydown', debouncedSearch)
+
+      function debounce(cb, time) {
+        let timeoutId
+        return (...args) => {
+          clearTimeout(timeoutId)
+          timeoutId = setTimeout(cb, time, ...args)
+          //   timeoutId = setTimeout(() => {
+          //     cb(...args)
+          //   }, time)
+        }
+      }
+
+      //   const newFunc = debounce(handleClick, 1000)
+
+      //   document.querySelector('button').addEventListener('click', newFunc)
+
+      //   function throttle(cb, delay) {
+      //     let time = 0
+      //     return () => {
+      //       if (Date.now() - time > delay) {
+      //         cb()
+      //         time = Date.now()
+      //       }
+      //     }
+      //   }
+
+      //   const newFunc = throttle(handleClick, 2000)
+
+      //   document.querySelector('button').addEventListener('click', newFunc)
+    </script>
+  </body>
+</html>

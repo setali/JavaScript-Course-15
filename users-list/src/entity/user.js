@@ -1,4 +1,4 @@
-import { COLUMNS } from "../tools/constants"
+import { COLUMNS } from '../tools/constants'
 
 export default class User {
   constructor ({ id, name, username, address }) {
